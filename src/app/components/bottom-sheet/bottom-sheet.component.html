@@ -1,0 +1,11 @@
+<mat-nav-list>
+  @for (item of data; track $index) {
+  <a mat-list-item (click)="handler(item)">
+    @if (item.icon) {
+    <mat-icon matListItemIcon aria-hidden="true">{{ item.icon }}</mat-icon>
+    }
+    <p matListItemTitle>{{ item.title }}</p>
+    <p matListItemLine>{{ item.line }}</p>
+  </a>
+  }
+</mat-nav-list>

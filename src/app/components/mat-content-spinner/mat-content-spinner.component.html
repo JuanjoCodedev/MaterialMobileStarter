@@ -1,0 +1,18 @@
+<main class="mat-content" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()">
+  <div class="content-wrapper">
+    <mat-spinner
+      [ngClass]="{ 'spinner-visible': showSpinner }"
+      class="spinner"
+      diameter="{{ diameterSpinner() }}"
+      [ngStyle]="{
+        '--spinner-position': spinnerPosition + 'px'
+      }"
+      [mode]="spinnerMode"
+      [value]="spinnerValue"
+      aria-label="Cargando datos"
+    >
+    </mat-spinner>
+
+    <ng-content> </ng-content>
+  </div>
+</main>

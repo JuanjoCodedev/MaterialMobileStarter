@@ -1,0 +1,14 @@
+<div class="body">
+  <app-mat-content [maxMovementSpinner]="100">
+    <button mat-button (click)="hadler()">Open sheet</button>
+    <button mat-flat-button (click)="dialog()">Open dialog</button>
+    <button mat-button (click)="toggle()">Open modal</button>
+    <button mat-button (click)="navigateExampleTwo()">Navegar</button>
+    <p>Arrastra hacia abajo para usar el refresh page</p>
+
+    <app-mat-modal [isTouch]="isTouch" (toggleModal)="toggle()" hasIconName="public" hasTitle="Planeta Tierra" [isModalFooter]="true">
+      <h2>Contenido del Modal</h2>
+      <p>Este es un ejemplo de modal con animación.</p>
+    </app-mat-modal>
+  </app-mat-content>
+</div>

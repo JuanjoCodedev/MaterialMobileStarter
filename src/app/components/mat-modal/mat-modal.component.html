@@ -1,0 +1,18 @@
+<div class="modal mat-modal-spacer" [@modalAnimation]="isTouch ? 'open' : 'close'">
+  <mat-toolbar>
+    @if (hasIconName()) {
+    <button mat-icon-button aria-label="icon-button with heart icon">
+      <mat-icon>{{hasIconName()}}</mat-icon>
+    </button>
+    }
+    <span>{{ hasTitle() }}</span>
+
+    <span class="mat-modal-spacer"></span>
+
+    <button mat-icon-button aria-label="icon-button with close icon" (click)="toggle()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <ng-content #matModalContent> </ng-content>
+</div>
